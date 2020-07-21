@@ -1,2 +1,2 @@
-# pub_calcapi
-Publicação do projeto CalcAPI
+# Publicação do projeto Calc API
+API que realiza operações matemáticas
