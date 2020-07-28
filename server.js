@@ -6,10 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //Construir o servidor
 var express_1 = __importDefault(require("express"));
 var routes_1 = __importDefault(require("./routes"));
+var dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 var app = express_1.default();
 app.use(express_1.default.json());
 app.use(routes_1.default);
-app.listen(8080, function () {
-    console.log('Servidor online');
+var port = process.env.PORT || 8050;
+app.listen(port, function () {
+    console.log('Servidor online na porta ' + port);
+    console.log("Servidor online na porta " + port);
 });
 //  localhost:3333
